@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:svgjs="http://svgjs.dev/svgjs" width="100%" height="100%">
+  <defs>
+    <linearGradient gradientTransform="rotate(-36, 0.5, 0.5)" x1="50%" y1="0%" x2="50%" y2="100%"
+      id="gggrain-gradient2">
+      <stop stop-color="#67b2e3ff" stop-opacity="1" offset="-0%"></stop>
+      <stop stop-color="rgba(255,255,255,0)" stop-opacity="0" offset="100%"></stop>
+    </linearGradient>
+    <linearGradient gradientTransform="rotate(36, 0.5, 0.5)" x1="50%" y1="0%" x2="50%" y2="100%" id="gggrain-gradient3">
+      <stop stop-color="#67b2e3ff" stop-opacity="1"></stop>
+      <stop stop-color="rgba(255,255,255,0)" stop-opacity="0" offset="100%"></stop>
+    </linearGradient>
+    <filter id="gggrain-filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox"
+      primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="2" seed="2" stitchTiles="stitch" x="0%" y="0%"
+        width="100%" height="100%" result="turbulence"></feTurbulence>
+      <feColorMatrix type="saturate" values="0" x="0%" y="0%" width="100%" height="100%" in="turbulence"
+        result="colormatrix"></feColorMatrix>
+      <feComponentTransfer x="0%" y="0%" width="100%" height="100%" in="colormatrix" result="componentTransfer">
+        <feFuncR type="linear" slope="3"></feFuncR>
+        <feFuncG type="linear" slope="3"></feFuncG>
+        <feFuncB type="linear" slope="3"></feFuncB>
+      </feComponentTransfer>
+      <feColorMatrix x="0%" y="0%" width="100%" height="100%" in="componentTransfer" result="colormatrix2" type="matrix"
+        values="1 0 0 0 0
+            0 1 0 0 0
+            0 0 1 0 0
+            0 0 0 19 -11"></feColorMatrix>
+    </filter>
+  </defs>
+  <g>
+    <rect width="100%" height="100%" fill="#efdd6f"></rect>
+    <rect width="100%" height="100%" fill="url(#gggrain-gradient3)"></rect>
+    <rect width="100%" height="100%" fill="url(#gggrain-gradient2)"></rect>
+    <rect width="100%" height="100%" fill="transparent" filter="url(#gggrain-filter)" opacity="0.5"
+      style="mix-blend-mode: soft-light"></rect>
+  </g>
+</svg>
+
+<form>
+
+  <div class="main pt-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title text-center fw-bold">المعلومات الشخصية</h4>
+
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">الإسم</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+
+              <div class="form-group">
+                <label for="exampleInputPassword1">الرقم القومي</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+
+              <div class="form-group">
+                <label for="exampleInputPassword1">رقم الموبايل</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+
+              <div class="form-group">
+                <label for="exampleInputPassword1">البريد الإلكتروني</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="main pt-3">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title text-center fw-bold text-sm">تفاصيل الشكوي</h4>
+
+              <form>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1">الحي المتواجد به الشكوي</label><br>
+                  <small id="emailHelp" class="form-text text-muted">
+                    تأكد من إختيار الحي بدقة,
+                    إختيار الحي الخاطئ سيتسبب في تأخير حل الشكوي و ربما إلغاؤها!
+                  </small>
+                  <select class="form-select mt-2" name="" id="">
+                    <option value="">إختر الحي</option>
+                  </select>
+                </div>
+
+                <div class="form-group mt-4">
+                  <label for="exampleInputEmail1">نوع الشكوي</label><br>
+                  <small id="emailHelp" class="form-text text-muted">
+                    تأكد من إختيار نوع الشكوي بدقة,
+                    إختيار النوع الخاطئ سيتسبب في تأخير حل الشكوي و ربما إلغاؤها! <br>
+                    <span class="fw-bold">*في حالة عدم التأكد من نوع الشكوي قم بإختيار : “لست متأكد” و سنقوم نحن بمراجعة
+                      الشكوي و إختيار النوع الأنسب</span>
+                  </small>
+                  <select class="form-select mt-2" name="" id="">
+                    <option value="">إختر نوع الشكوي</option>
+                  </select>
+                </div>
+
+                <div class="form-group mt-4">
+                  <label for="exampleInputEmail1">تفاصيل الشكوي </label>
+                  <textarea class="form-control" aria-label="With textarea"></textarea>
+                </div>
+
+                <div class="form-group mt-4">
+                  <label for="exampleInputEmail1">تفاصيل الشكوي </label>
+                  <input type="file" class="form-control mt-1" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="main my-3">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card">
+            <button type="submit" class="btn btn-primary">تــم</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</form>
